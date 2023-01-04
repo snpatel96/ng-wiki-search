@@ -1,9 +1,13 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class WikipediaService {
+  constructor(private http: HttpClient) {}
 
-  constructor() { }
+  search(term: string) {
+    return 'I am wikipedia search result.';
+  }
 }
